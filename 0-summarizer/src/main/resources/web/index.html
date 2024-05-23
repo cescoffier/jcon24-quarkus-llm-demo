@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Insurance Company</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="./static/favicon.ico">
+    {#bundle /}
+</head>
+
+<body>
+<header>
+    <div class="banner" onclick="location.href='/';">
+        <img src="/static/logo.png" alt="tic"/>
+        <h1>The Insurance Company</h1>
+    </div>
+    <tic-nav></tic-nav>
+</header>
+
+<main>
+    <div id="outlet">
+        <img class="js-loading-indicator" src="/static/loader.svg"/>
+    </div>
+</main>
+
+<footer>
+    <span>&copy; {config:['copyright.year']} the-insurance-company.org | v{config:['quarkus.application.version']}-redhat-0001</span>
+</footer>
+</body>
+
+</html>
