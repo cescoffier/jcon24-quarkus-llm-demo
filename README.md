@@ -1,5 +1,4 @@
-# Quarkus LLM demo
-
+# Quarkus LLM Demos
 
 This repository contains a set of demos demonstrating some Quarkus Langchain4J features:
 
@@ -14,46 +13,45 @@ This repository contains a set of demos demonstrating some Quarkus Langchain4J f
 - Java 21 or later
 - Apache Maven 3.9.6 or later
 - Podman or Docker (Podman recommended)
-- A working docker-compose installation (working with podman recommended)
+- A working Docker Compose installation (working with Podman recommended)
 
-## Running the demos
+## Running the Demos
 
-The repo follows an incremental structure. Each demo builds on the previous one. To run a demo, navigate to its directory and run `mvn quarkus:dev`. 
+The repo follows an incremental structure. Each demo builds on the previous one. To run a demo, navigate to its directory and run `mvn quarkus:dev`.
 The UI is available at `http://localhost:8080`.
 
-### Demo 1: Declarative AI services
+### Demo 1: Declarative AI Services
 
-This demo (contained in the `0-summarizer` directory) demonstrates how to create a declarative AI service using Quarkus and Langchain4J. 
+This demo (contained in the `0-summarizer` directory) demonstrates how to create a declarative AI service using Quarkus and Langchain4J.
 The service provides a REST API to summarize insurance claims (you can find claim examples in the `claim-samples` directory).
 It also extracts the policy number and analyzes the sentiment of the claim.
 
 ### Demo 2: Tools and Agents
 
-This demo (located in the `1-agent` directory) extends the previous one but use a _tool_ to detect if the new document is related to an existing claim. 
+This demo (located in the `1-agent` directory) extends the previous one but uses a _tool_ to detect if the new document is related to an existing claim.
 If so, the application updates the existing claim.
 
 ### Demo 3: Observability
 
-This demo (locate in the `2-observability` directory) extends the previous one by adding observability features to the application.
+This demo (located in the `2-observability` directory) extends the previous one by adding observability features to the application.
 
 You can run the observability stack using:
 ```shell
 > podman compose -f infrastructure/observability.yaml up
 ```
 
-Then use the application. 
-The Jaeger UI is available at `http://localhost:16686`. 
+Then use the application.
+The Jaeger UI is available at `http://localhost:16686`.
 To demonstrate Prometheus, use the dev-ui (available at `http://localhost:8080/q/dev`).
 
-### Demo 4: Building chatbots
+### Demo 4: Building Chatbots
 
 This demo (located in the `3-chatbot` directory) extends the previous one by adding a chatbot to the application.
-This chatbot is very simple and use a tool to find a given claim.
+This chatbot is very simple and uses a tool to find a given claim.
 
-### Demo 5: Implementing a RAG (Retrieval Augmented Generation) pattern
+### Demo 5: Implementing a RAG (Retrieval Augmented Generation) Pattern
 
 This demo (located in the `4-rag` directory) extends the previous one by adding a RAG pattern to the application.
-
 
 ## License
 
